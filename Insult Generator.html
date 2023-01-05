@@ -1,0 +1,87 @@
+<html>
+<head>
+	<title>Insult Generator</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+			padding: 30px;
+			background-color: #111;
+			color: #fff;
+		}
+		h1 {
+			margin-bottom: 30px;
+		}
+		form {
+			display: inline-block;
+			margin-bottom: 30px;
+		}
+		input[type="text"] {
+			font-size: 16px;
+			padding: 10px;
+			border: 2px solid #ccc;
+			border-radius: 4px;
+			background-color: #222;
+			color: #fff;
+		}
+		button[type="button"] {
+			font-size: 16px;
+			padding: 10px 20px;
+			background-color: #333;
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		button[type="button"]:hover {
+			background-color: #444;
+		}
+		#insult {
+			font-size: 20px;
+			color: #fff;
+			margin-top: 30px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Insult Generator</h1>
+	<p>Enter a name below to generate an insult:</p>
+	<form>
+		<input type="text" id="name" placeholder="Name">
+		<button type="button" onclick="generateInsult()">Generate Insult</button>
+	</form>
+	<p id="insult"></p>
+	<script>
+	function generateInsult() {
+		var name = document.getElementById("name").value;
+		var insults = [
+			"You are a complete idiot, " + name + ".",
+			"You have the intelligence of a doorknob, " + name + ".",
+			"You are a total moron, " + name + ".",
+			"You are about as useful as a chocolate teapot, " + name + ".",
+			"You are an imbecile, " + name + ".",
+			"You are as smart as a rock, " + name + ".",
+			"You have the common sense of a turnip, " + name + ".",
+			"You are about as sharp as a bowling ball, " + name + ".",
+			"You are dumber than a box of rocks, " + name + ".",
+			"You are a clueless nincompoop, " + name + ".",
+			"You are a complete buffoon, " + name + ".",
+			"You are an intellectually challenged simpleton, " + name + ".",
+			"You are a brainless twit, " + name + ".",
+			"You are a clueless imbecile, " + name + ".",
+			"You are a mental midget, " + name + ".",
+			"You are a dimwitted dunce, " + name + ".",
+			"You are a dense ignoramus, " + name + ".",
+			"You are a clueless boob, " + name + ".",
+			"You are a simpleminded fool, " + name + ".",
+			"You are a clueless dolt, " + name + ".",
+			"You are a mentally challenged numbskull, " + name + ".",
+			"You are a clueless clod, " + name + ".",
+			"You are a dim-witted dummy, " + name + "."
+		];
+		var insult = insults[Math.floor(Math.random() * insults.length)];
+		document.getElementById("insult").innerHTML = insult;
+	}
+</script>
+</body>
+</html>
